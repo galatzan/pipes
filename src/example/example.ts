@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
+import { MatchPipe } from '../pipes/match.pipe';
+
 
 @Component({
   selector: 'examples',
-  pipes: [],
+  pipes: [MatchPipe],
   template:`
-   <h1>Pipes Examples</h1>
+   <h1>{{greeting | match: 'hfdjshfjks' : 'gi'}}</h1>
    ` ,
 })
 
-export class Examples {}
+export class Examples {
+
+private greeting = `Hello world, hello world, helo world, hell`; 
+
+}
