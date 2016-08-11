@@ -13,7 +13,7 @@ export class MatchPipe implements PipeTransform{
     return typeof input == 'string'?
     input.match(reg)?
     input.match(reg):
-    'No Matches Found':
+    'No matches found':
     null;
   }
 }
